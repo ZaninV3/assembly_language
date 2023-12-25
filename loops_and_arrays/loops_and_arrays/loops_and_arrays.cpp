@@ -30,9 +30,14 @@ int main() {
 		std::cin >> input_massive[i];
 	}
 	// Сделаем переменную-счётчик
-	unsigned short count;
+	unsigned int count;
 
-	// Для начала решим на C++
+	__asm {}
+
+	/*
+	// Решим на C++
+
+	// Проинициализируем 0;
 	count = 0;
 
 	// По условию нам дан n,
@@ -41,7 +46,7 @@ int main() {
 		// В задании указано, что первый элемент имеет индекс 1
 		if ((i + 1) % 2 != 0 and input_massive[i] % 2 == 0) count++;
 	}
-
+	*/
 	// Ну а вот и вывод
 	std::cout << "the count of values is " << count;
 }
