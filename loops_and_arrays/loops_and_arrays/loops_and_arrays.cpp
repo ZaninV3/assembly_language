@@ -30,9 +30,22 @@ int main() {
 		std::cin >> input_massive[i];
 	}
 	// Сделаем переменную-счётчик
-	unsigned int count;
+	unsigned short count;
 
-	__asm {}
+	// ???
+	// https://www.cyberforum.ru/cpp-beginners/thread2159053.html
+	__asm {
+		mov esi, arr
+		add esi, 4
+		mov ecx, n
+		mov ebx, 2
+		next_1:
+			mov eax, [esi]
+			imul ebx
+			mov[esi], eax
+			add esi, 8
+		loop next_1
+	}
 
 	/*
 	// Решим на C++
